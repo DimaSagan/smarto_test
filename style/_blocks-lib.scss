@@ -1,0 +1,12 @@
+[class*="--flex"] {
+    display: flex;
+}
+[class*="--flex-column"] {
+    display: flex;
+    flex-direction: column;
+}
+
+[class*="--grid-w250"] {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}

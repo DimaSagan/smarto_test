@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <title>Smart Orange</title>
+    <script type="module" src="script/script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- <header class="wrapper__header header">header</header> -->
+        <main class="wrapper__page page">
+
+            <section class="page__swiper">
+
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <img src="img/slide_1.png" alt="slide one">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/slide_2.png" alt="slide two">
+                        </div>
+                    </div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-prev">
+                        <svg>
+                            <use href="img/sprite.svg#arrow"></use>
+                        </svg>
+                    </div>
+                    <div class="swiper-next">
+                        <svg>
+                            <use href="img/sprite.svg#arrow"></use>
+                        </svg>
+                    </div>
+
+                    <div class="decor">
+                        <div class="decor__wrapper wrapper-decor__container">
+                            <svg width="41" height="9">
+                                <use href="img/sprite.svg#union"></use>
+                            </svg>
+                            <div class="decor__line"></div>
+                            <svg width="22" height="22">
+                                <use href="img/sprite.svg#clover"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="page__hero hero">
+                <div class="hero__container">
+                    <h2 class="hero__title">Збудовані обʼєкти</h2>
+
+                    <div class="hero__tabs tabs">
+                        <div class="tabs__navigation">
+                            <ul>
+                                <li data-buildings="all" class="active">усі</li>
+                                <li data-buildings="residential">житловий</li>
+                                <li data-buildings="public">громадський</li>
+                                <li data-buildings="sport">спортивний</li>
+                            </ul>
+                        </div>
+                        <div class="tabs__content">
+
+                        </div>
+
+                    </div>
+                    <div class="hero__load-more">
+                        <button class="load-more">
+                            завантажити ще
+                            <svg>
+                                <use href="img/sprite.svg#arrow"></use>
+                            </svg>
+                        </button>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+        <footer class="wrapper__footer footer">
+            <div class="footer__container">
+
+                <div class="decor">
+                    <div class="decor__wrapper">
+                        <svg width="41" height="9">
+                            <use href="img/sprite.svg#union"></use>
+                        </svg>
+                        <div class="decor__line"></div>
+
+                    </div>
+
+                </div>
+                <div class="footer__contacts contacts-footer">
+
+                    <h6 class="contacts-footer__title">Контакти</h6>
+                    <div class="contacts-footer__items">
+
+                        <div class="contacts-footer__block">
+                            <div class="contacts-footer__block-item">
+                                <p>головний офіс</p>
+                                <a href="">SmartorangeTest@gmail.com</a>
+                            </div>
+
+                            <div class="contacts-footer__block-item">
+                                <p>наші соцмережі</p>
+                                <div class="socials">
+                                    <a href="#">
+                                        <svg>
+                                            <use href="img/sprite.svg#insta"></use>
+                                        </svg>
+                                    </a>
+                                    <a href="#">
+                                        <svg>
+                                            <use href="img/sprite.svg#yt"></use>
+                                        </svg>
+                                    </a>
+                                    <a href="#">
+                                        <svg>
+                                            <use href="img/sprite.svg#fb"></use>
+                                        </svg>
+                                    </a>
+                                    <a href="#">
+                                        <svg>
+                                            <use href="img/sprite.svg#tik-tok"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="button">відкрити на google maps</button>
+
+                        <div class="contacts-footer__block">
+                            <div class="contacts-footer__block-item">
+                                <p>телефони відділів</p>
+
+
+                                <a href="#" text="( Юридичний відділ )">
+                                    <svg width="14" height="14">
+                                        <use href="img/sprite.svg#tel"></use>
+                                    </svg>
+                                    (044) 444-44-44
+                                </a>
+
+
+                                <a href="#" text="( Бухгалтерія )">
+                                    <svg width="14" height="14">
+                                        <use href="img/sprite.svg#tel"></use>
+                                    </svg>
+                                    (055) 555-55-55
+                                </a>
+                            </div>
+
+                            <div class="contacts-footer__block-item">
+                                <p>email</p>
+                                <a href="#">office@smarto.ua</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="footer__image">
+
+                    <div class="footer__image-wrapper">
+                        <img class="left" src="img/footer_01.webp" alt="">
+                        <img class="right" src="img/footer_02.webp" alt="">
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

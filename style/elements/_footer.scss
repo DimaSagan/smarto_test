@@ -1,0 +1,170 @@
+@use "../mixin" as *;
+@use "../variables" as *;
+
+.footer {
+    padding-bottom: toRem(150);
+    // .footer__container
+
+    &__container {
+        padding-top: toRem(38);
+        position: relative;
+        display: flex;
+        column-gap: toRem(50);
+        justify-content: space-between;
+        @media (max-width: toEm($mobile)) {
+            flex-wrap: wrap-reverse;
+            row-gap: toRem(30);
+        }
+    }
+
+    // .footer__decor
+
+    .decor {
+        position: absolute;
+        top: 0;
+        left: toRem(15);
+        width: 50%;
+        max-width: toRem(880);
+
+        &__wrapper {
+            gap: toRem(20);
+            &::after {
+                content: "smarto";
+                text-transform: uppercase;
+                font-size: toRem(14);
+            }
+            svg {
+                flex-shrink: 0;
+            }
+        }
+        &__line {
+            // width: 100%;
+            // // max-width: toRem(744);
+            // flex-grow: 1;
+        }
+    }
+    // .footer__image
+
+    &__image {
+        max-width: toRem(830);
+        flex-grow: 1;
+        // position: relative;
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-items: center;
+        width: 100%;
+    }
+    &__image-wrapper {
+        position: relative;
+        display: grid;
+        grid-template-columns: auto;
+        // align-items: center;
+        justify-items: center;
+        width: 100%;
+        grid-row-start: 1;
+        grid-column-start: 1;
+        .left,
+        .right {
+            width: 82%;
+            max-width: toRem(680);
+            border-radius: 50%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            grid-row-start: 1;
+            grid-column-start: 1;
+        }
+        .left {
+            z-index: 1;
+            transform: translateX(-11%);
+            position: relative;
+        }
+        .right {
+            transform: translateX(11%);
+        }
+        &::before,
+        &::after {
+            position: absolute;
+            z-index: 13;
+            font-size: clamp(60px, calc(60px + 0.064 * (100vw - 830px)), 96px);
+            color: white;
+            mix-blend-mode: exclusion;
+        }
+        &::before {
+            content: "Якість";
+            left: 0;
+            top: 7%;
+        }
+        &::after {
+            content: "понад усе";
+            right: 18%;
+            bottom: 7%;
+        }
+    }
+}
+.contacts-footer {
+    max-width: toRem(635);
+    flex-basis: 34.46%;
+    @media (max-width: toEm($mobile)) {
+        width: 100%;
+        max-width: 100%;
+        flex-basis: auto;
+    }
+    // .contacts-footer__title
+
+    &__title {
+        // font-size: toRem(96);
+        @include adaptiveValue(font-size, 96, 40);
+        margin-bottom: toEm(83, 96);
+    }
+
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        gap: toRem(15);
+        flex-wrap: wrap;
+        &:first-child {
+            margin-bottom: toRem(41);
+        }
+    }
+    &__block-item {
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        gap: toRem(23);
+        min-width: toRem(200);
+        p {
+            font-size: toRem(24);
+            font-weight: 600;
+            &::first-letter {
+                text-transform: uppercase;
+            }
+        }
+        a {
+            font-size: 20px;
+            font-weight: 500;
+        }
+        a[text] {
+            display: flex;
+            gap: toRem(12);
+            align-items: center;
+            white-space: normal;
+            cursor: pointer;
+
+            &::after {
+                content: attr(text);
+                color: gray;
+            }
+        }
+    }
+    button {
+        margin-bottom: toRem(84);
+    }
+    // .contacts-footer__items
+
+    &__items {
+        // display: flex;
+        // flex-direction: column;
+        // gap: toRem(41);
+    }
+}

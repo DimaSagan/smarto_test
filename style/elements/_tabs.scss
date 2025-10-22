@@ -1,0 +1,58 @@
+@use "../mixin" as *;
+@use "../variables" as *;
+
+.tabs {
+    margin-bottom: toRem(100);
+    // .tabs__navigation
+
+    &__navigation {
+        margin-bottom: toRem(100);
+        ul {
+            display: flex;
+            max-width: toRem(602);
+            justify-content: space-between;
+            font-size: toRem(24);
+            font-weight: 600;
+            text-transform: capitalize;
+            gap: toRem(10);
+            flex-wrap: wrap;
+            li {
+                position: relative;
+                overflow: hidden;
+                padding-bottom: toRem(5);
+                cursor: pointer;
+                &::after {
+                    content: "";
+                    width: 100%;
+                    height: toRem(1);
+                    background-color: var(--colorTextPrimary);
+                    position: absolute;
+                    left: -100%;
+                    bottom: 0;
+                    transition: all 0.3s ease-in-out;
+                }
+                &:hover {
+                    &::after {
+                        left: 0;
+                    }
+                }
+                &.active {
+                    &::after {
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    // .tabs__content
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        column-gap: 13%;
+        row-gap: toRem(40);
+        align-items: start;
+        justify-items: center;
+    }
+}

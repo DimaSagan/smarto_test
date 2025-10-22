@@ -1,0 +1,38 @@
+//screen sizes
+// Min page width
+$minWidth: 320;
+// Screen width
+$maxWidth: 1920;
+// Container width
+$maxWidthContainer: 1800;
+// Container safe border
+$containerPadding: 30;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// break points
+$bigScreen: 1920.98;
+$pc: 1023.98;
+$tablet: 990.98;
+$mobile: 767.98;
+$mobileSmall: 479.98;
+
+// colors
+
+$theme-default: (
+    bgColorPrimary: rgb(255, 255, 255),
+    // bgColorSecondary: rgba(18, 61, 75, 1),
+    // bgColorTertiary: rgba(12, 53, 66, 1),
+    // bgColorQuaternary: rgba(255, 255, 255, 1),
+    colorTextPrimary: black,
+    colorTextSecondary: white,
+    colorTextTertiary: rgba(115, 115, 115, 1),
+    buttonColor: black,
+    buttonHover: white,
+    buttonActive: rgb(62, 62, 62),
+    iconColor: black,
+    iconHover: #90abbb,
+    iconActive: rgb(62, 62, 62),
+    borderColor: rgba(168, 168, 168, 0.2),
+    borderColorSecondary: #a8a8a8
+);

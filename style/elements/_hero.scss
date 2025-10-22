@@ -1,0 +1,17 @@
+@use "../mixin" as *;
+@use "../variables" as *;
+@use "sass:math";
+
+.hero {
+    &__container {
+    }
+    &__title {
+        font-size: toRem(48);
+        margin-bottom: toRem(40);
+        font-weight: 500;
+        line-height: 1.2;
+    }
+    &__load-more {
+        text-align: center;
+    }
+}

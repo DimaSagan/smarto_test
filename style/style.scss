@@ -1,0 +1,141 @@
+@forward "mixin";
+@forward "variables";
+@forward "fonts";
+@forward "reset";
+@use "fonts" as *;
+@use "blocks-lib" as *;
+@use "mixin" as *;
+@use "variables" as *;
+@use "elements/header" as *;
+@use "elements/hero" as *;
+@use "elements/tabs" as *;
+@use "elements/swiper" as *;
+@use "elements/card" as *;
+@use "elements/footer" as *;
+@import url("https://fonts.googleapis.com/css?family=Inter+Tight:regular,500,600,700,800&display=swap");
+:root {
+    @include theme($theme-default);
+}
+// .dark-mode {
+//     @include theme($theme-dark);
+// }
+body {
+    background-color: var(--bgColorPrimary);
+
+    color: var(--textColor);
+    font-family: "Inter Tight", sans-serif;
+    font-size: toRem(20);
+    &:has(.menu-open) {
+        overflow-y: hidden;
+    }
+}
+[class*="__container"] {
+    max-width: #{$containerWidth}px;
+    margin: 0 auto;
+    padding-left: toRem(15);
+    padding-right: toRem(15);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.page {
+    flex-grow: 1;
+    &__swiper {
+        margin-bottom: toRem(100);
+    }
+    &__hero {
+        margin-bottom: toRem(200);
+    }
+}
+
+.load-more {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: toRem(5);
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: toRem(14);
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: toRem(10);
+    &::after {
+        content: "";
+        width: 100%;
+        height: toRem(1);
+        background-color: var(--colorTextPrimary);
+        position: absolute;
+        left: -100%;
+        bottom: 0;
+        transition: all 0.3s ease-in-out;
+    }
+    &:hover {
+        &::after {
+            left: 0;
+        }
+    }
+    svg {
+        width: toRem(16);
+        height: toRem(16);
+        // display: block;
+    }
+}
+
+.button {
+    padding: toRem(13) toRem(20);
+    text-transform: uppercase;
+    background-color: black;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    border-radius: toRem(100);
+    cursor: pointer;
+
+    @media (any-hover: hover) {
+        &:hover {
+            scale: 1.05;
+            background-color: gray;
+        }
+    }
+}
+.socials {
+    display: flex;
+    gap: toRem(4);
+    flex-direction: row;
+    a {
+        background-color: var(--colorTextPrimary);
+        cursor: pointer;
+        border-radius: 50%;
+        flex-shrink: 0;
+        width: toRem(46);
+        height: toRem(46);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease-in-out;
+        @media (any-hover: hover) {
+            &:hover {
+                scale: 1.05;
+                background-color: gray;
+            }
+        }
+        svg {
+            width: toRem(24);
+            height: toRem(24);
+        }
+    }
+}
+
+.decor {
+    &__wrapper {
+        display: flex;
+        align-items: center;
+    }
+    &__line {
+        background-color: black;
+        height: toRem(1);
+        width: 100%;
+        // flex-grow: 1;
+    }
+}
